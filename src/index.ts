@@ -1,0 +1,1 @@
+export { createPuppeteerMiddleware } from "./middleware";

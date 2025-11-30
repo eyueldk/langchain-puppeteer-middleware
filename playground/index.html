@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummy Input Test Site</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      .box {
+        padding: 20px;
+        border: 2px dashed #aaa;
+        margin-top: 20px;
+        border-radius: 12px;
+        min-height: 80px;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dummy Input Test Page</h1>
+    <p>Type anything into these fields to test input behavior.</p>
+
+    <label>Text Input:</label>
+    <input type="text" placeholder="Type something..." />
+
+    <label>Textarea:</label>
+    <textarea rows="5" placeholder="Type multiple lines..."></textarea>
+
+    <div class="box" contenteditable="true">
+      This is a content‑editable area. Click and type freely.
+    </div>
+  </body>
+</html>
