@@ -2,6 +2,9 @@
   "name": "@crawlmachine/langchain-puppeteer-middleware",
   "module": "./dist/index.mjs",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "LangChain middleware that provides Puppeteer browser automation tools for AI agents",
   "license": "MIT",
   "keywords": [
@@ -12,7 +15,7 @@
     "ai-agents",
     "web-scraping"
   ],
-  "author": "CrawlMachine",
+  "author": "Eyuel G. Molla",
   "repository": {
     "type": "git",
     "url": "https://github.com/crawlmachine/langchain-puppeteer-middleware"
@@ -21,7 +24,6 @@
     "url": "https://github.com/crawlmachine/langchain-puppeteer-middleware/issues"
   },
   "homepage": "https://github.com/crawlmachine/langchain-puppeteer-middleware#readme",
-  "private": false,
   "files": [
     "dist",
     "README.md",
