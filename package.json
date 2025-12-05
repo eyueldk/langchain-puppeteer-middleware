@@ -1,11 +1,11 @@
 {
-  "name": "langchain-middleware-puppeteer",
+  "name": "langchainjs-browsing",
   "module": "./dist/index.mjs",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
   },
-  "description": "LangChain middleware that provides Puppeteer browser automation tools for AI agents",
+  "description": "LangChain library that provides browser automation tools for AI agents",
   "license": "MIT",
   "keywords": [
     "langchain",
@@ -18,12 +18,12 @@
   "author": "Eyuel G. Molla",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eyueldk/langchain-middleware-puppeteer"
+    "url": "https://github.com/eyueldk/langchainjs-browsing"
   },
   "bugs": {
-    "url": "https://github.com/eyueldk/langchain-middleware-puppeteer/issues"
+    "url": "https://github.com/eyueldk/langchainjs-browsing/issues"
   },
-  "homepage": "https://github.com/eyueldk/langchain-middleware-puppeteer#readme",
+  "homepage": "https://github.com/eyueldk/langchainjs-browsing#readme",
   "files": [
     "dist",
     "README.md",

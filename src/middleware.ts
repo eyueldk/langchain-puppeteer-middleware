@@ -24,15 +24,15 @@ export type ToolName =
   | "inspectConsole"
   | "inspectNetwork";
 
-export type PuppeteerMiddlewareOptions = {
+export type BrowsingMiddlewareOptions = {
   page: Page;
   includeTools?: Partial<Record<ToolName, boolean>>;
 };
 
-export function createPuppeteerMiddleware({
+export function createBrowsingMiddleware({
   page,
   includeTools,
-}: PuppeteerMiddlewareOptions) {
+}: BrowsingMiddlewareOptions) {
   const session = new Session({ page });
   const availableTools: Record<ToolName, () => any> = {
     goto: () => createGotoTool({ session }),
@@ -57,7 +57,7 @@ export function createPuppeteerMiddleware({
     })
     .map(([, fn]) => fn());
   return createMiddleware({
-    name: "puppeteer",
+    name: "browsing",
     tools,
   });
 }

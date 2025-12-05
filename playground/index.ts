@@ -2,7 +2,7 @@ import path from "path";
 import { createAgent } from "langchain";
 import { launch } from "puppeteer";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { createPuppeteerMiddleware } from "../src";
+import { createBrowsingMiddleware } from "../src";
 
 const browser = await launch({
   headless: false,
@@ -15,7 +15,7 @@ const model = new ChatGoogleGenerativeAI({
 const agent = createAgent({
   model,
   middleware: [
-    createPuppeteerMiddleware({
+    createBrowsingMiddleware({
       page,
       includeTools: {
         getScreenshot: false,

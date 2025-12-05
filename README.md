@@ -1,13 +1,13 @@
-# langchain-middleware-puppeteer
+# langchainjs-browsing
 
-A LangChain middleware that provides Puppeteer browser automation tools for AI agents. This package allows AI agents to interact with web pages through a set of browser automation tools.
+A LangChain library that provides browser automation tools for AI agents. This package allows AI agents to interact with web pages through a set of browser automation tools.
 
 ## Installation
 
 ```bash
-npm install langchain-middleware-puppeteer langchain puppeteer
+npm install langchainjs-browsing langchain puppeteer
 # or
-bun install langchain-middleware-puppeteer langchain puppeteer
+bun install langchainjs-browsing langchain puppeteer
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ bun install langchain-middleware-puppeteer langchain puppeteer
 import { createAgent } from "langchain";
 import { launch } from "puppeteer";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { createPuppeteerMiddleware } from "langchain-middleware-puppeteer";
+import { createBrowsingMiddleware } from "langchainjs-browsing";
 
 // Launch a Puppeteer browser
 const browser = await launch({ headless: false });
@@ -30,10 +30,10 @@ const model = new ChatGoogleGenerativeAI({
   apiKey: process.env.GOOGLE_API_KEY,
 });
 
-// Create an agent with the Puppeteer middleware
+// Create an agent with the browsing library
 const agent = createAgent({
   model,
-  middleware: [createPuppeteerMiddleware({ page })],
+  middleware: [createBrowsingMiddleware({ page })],
 });
 
 // Use the agent to browse and interact with web pages
@@ -52,7 +52,7 @@ You can choose which tools to make available to the agent:
 const agent = createAgent({
   model,
   middleware: [
-    createPuppeteerMiddleware({
+    createBrowsingMiddleware({
       page,
       includeTools: {
         goto: true,
@@ -69,7 +69,7 @@ const agent = createAgent({
 
 ## Available Tools
 
-The middleware provides the following tools:
+The library provides the following tools:
 
 - **`goto`** - Navigate to a URL in the current browsing session
 - **`click`** - Click an element using a CSS selector
@@ -84,9 +84,9 @@ The middleware provides the following tools:
 
 ## API
 
-### `createPuppeteerMiddleware(options)`
+### `createBrowsingMiddleware(options)`
 
-Creates a Puppeteer middleware for LangChain agents.
+Creates browsing tools for LangChain agents.
 
 #### Options
 

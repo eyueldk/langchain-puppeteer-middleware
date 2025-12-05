@@ -1,1 +1,1 @@
-export { createPuppeteerMiddleware } from "./middleware";
+export { createBrowsingMiddleware } from "./middleware";
