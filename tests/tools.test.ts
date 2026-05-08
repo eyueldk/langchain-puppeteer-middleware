@@ -1,4 +1,4 @@
-import { describe, test, expect, beforeAll, afterAll } from "bun:test";
+import { describe, test, expect, beforeAll, afterAll } from "vitest";
 import puppeteer, { Browser, Page } from "puppeteer";
 import { Session } from "../src/session";
 import { createGotoTool } from "../src/tools/goto-tool";

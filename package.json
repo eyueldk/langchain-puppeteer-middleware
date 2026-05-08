@@ -1,7 +1,6 @@
 {
   "name": "langchainjs-browsing",
-  "module": "./dist/index.mjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publishConfig": {
     "access": "public"
   },
@@ -31,21 +30,23 @@
     "package.json"
   ],
   "scripts": {
-    "start": "bun playground/index.ts",
+    "start": "tsx playground/index.ts",
     "build": "tsdown",
-    "prepublishOnly": "bun run build",
+    "prepublishOnly": "pnpm build",
     "check": "tsc --noEmit",
+    "test": "vitest run",
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@langchain/google-genai": "^2.0.0",
-    "@types/bun": "latest",
-    "prettier": "^3.7.3",
-    "tsdown": "^0.17.0-beta.4"
+    "@langchain/google-genai": "^2.1.30",
+    "prettier": "^3.8.3",
+    "tsdown": "^0.17.4",
+    "tsx": "^4.19.0",
+    "vitest": "^3.1.0"
   },
   "peerDependencies": {
-    "langchain": "*",
-    "puppeteer": "*",
+    "langchain": "1.4.0",
+    "puppeteer": "24.43.0",
     "typescript": "^5"
   },
   "type": "module",
@@ -54,5 +55,9 @@
   "exports": {
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
+  },
+  "module": "./dist/index.mjs",
+  "dependencies": {
+    "zod": "^4.4.3"
   }
 }

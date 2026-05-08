@@ -7,7 +7,7 @@ A LangChain library that provides browser automation tools for AI agents. This p
 ```bash
 npm install langchainjs-browsing langchain puppeteer
 # or
-bun install langchainjs-browsing langchain puppeteer
+pnpm add langchainjs-browsing langchain puppeteer
 ```
 
 ## Usage
@@ -116,31 +116,31 @@ type ToolName =
 ### Install Dependencies
 
 ```bash
-bun install
+pnpm install
 ```
 
 ### Run Playground
 
 ```bash
-bun start
+pnpm start
 ```
 
 ### Build
 
 ```bash
-bun run build
+pnpm build
 ```
 
 ### Run Tests
 
 ```bash
-bun test
+pnpm test
 ```
 
 ### Format Code
 
 ```bash
-bun run format
+pnpm format
 ```
 
 ## License
