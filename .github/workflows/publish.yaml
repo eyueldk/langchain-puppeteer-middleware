@@ -20,11 +20,20 @@ jobs:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false  # never use caching in release builds
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+      
       - name: Install dependencies
         run: pnpm ci
+      
       - name: Build project
         run: pnpm run build --if-present
+      
       - name: Run tests
         run: pnpm test
+      
       - name: Publish to npm
         run: pnpm publish
