@@ -117,6 +117,11 @@ export async function getSimplifiedHtml({
       .querySelectorAll("script, style, noscript, link")
       .forEach((el) => el.remove());
     clone.querySelectorAll("*").forEach((element) => {
+      Array.from(element.childNodes).forEach((child) => {
+        if (child.nodeType === Node.COMMENT_NODE) {
+          child.remove();
+        }
+      });
       Array.from(element.attributes).forEach((attribute) => {
         if (!isInterestingAttribute(attribute.name)) {
           element.removeAttribute(attribute.name);
